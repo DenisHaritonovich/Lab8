@@ -133,7 +133,7 @@ public class LoginServlet extends ChatServlet {
             sessionIdCookie.setMaxAge(60*60*24*365);
             // Добавить cookie вHTTP-ответ
             response.addCookie(sessionIdCookie);
-            String systemMessage = " Добро пожаловать в чат ";
+            String systemMessage = " Пользователь " + aUser.getName() + " пришел в чат ";
             // Перейти к главному окну чата
             response.sendRedirect(response.encodeRedirectURL("/Laba8/view.jsp"));
             // Вернуть null, т.е. сообщений об ошибках нет
